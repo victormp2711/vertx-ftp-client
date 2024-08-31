@@ -101,4 +101,5 @@ public class FtpFile {
 	public String toString() {
 		return "FtpFile [type=" + type + ", name=" + name + ", size=" + size + ", date=" + date + "]";
 	}
+
 }

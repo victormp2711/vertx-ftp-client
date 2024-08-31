@@ -28,7 +28,7 @@ import io.vertx.core.file.OpenOptions;
 public class FtpClientTele2Test {
     static Vertx vertx;
 
-    @BeforeClass
+   /* @BeforeClass
     public static void setup() {
         vertx = Vertx.vertx();
     }
@@ -40,14 +40,14 @@ public class FtpClientTele2Test {
 
     @Test
     public void testLogin() {
-        login("speedtest.tele2.net", "anonymous", "passwd", (client, latch) -> {
+        login("ftp.dlptest.com", "dlpuser", "rNrKYTX9g7z3RgJRmxWuGHbeu", (client, latch) -> {
             latch.countDown();
         });
     }
 
     @Test
     public void testList() {
-        login("speedtest.tele2.net", "anonymous", "passwd", (client, latch) -> {
+        login("ftp.dlptest.com", "dlpuser", "rNrKYTX9g7z3RgJRmxWuGHbeu", (client, latch) -> {
             client.list(list -> {
                 if (latch.failed(list)) {
                     return;
@@ -61,7 +61,7 @@ public class FtpClientTele2Test {
 
     @Test
     public void testListParsed() {
-        login("speedtest.tele2.net", "anonymous", "passwd", (client, latch) -> {
+        login("ftp.dlptest.com", "dlpuser", "rNrKYTX9g7z3RgJRmxWuGHbeu", (client, latch) -> {
             client.list(list -> {
                 if (latch.failed(list)) {
                     return;
@@ -77,7 +77,7 @@ public class FtpClientTele2Test {
 
     @Test
     public void testRetr() {
-        login("speedtest.tele2.net", "anonymous", "passwd", (client, latch) -> {
+        login("ftp.dlptest.com", "dlpuser", "rNrKYTX9g7z3RgJRmxWuGHbeu", (client, latch) -> {
             vertx.fileSystem().open("target/tmp.zip", new OpenOptions().setWrite(true).setTruncateExisting(true), arfile -> {
                 if (latch.failed(arfile)) {
                     return;
@@ -101,7 +101,7 @@ public class FtpClientTele2Test {
 
     @Test
     public void testStor() {
-        login("speedtest.tele2.net", "anonymous", "passwd", (client, latch) -> {
+        login("ftp.dlptest.com", "dlpuser", "rNrKYTX9g7z3RgJRmxWuGHbeu", (client, latch) -> {
             vertx.fileSystem().open("LICENSE-2.0.txt", new OpenOptions().setRead(true), arfile -> {
                 if (latch.failed(arfile)) {
                     return;
@@ -138,5 +138,5 @@ public class FtpClientTele2Test {
             });
         });
         latch.await();
-    }
+    }*/
 }

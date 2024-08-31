@@ -26,6 +26,7 @@ public class Response {
     protected String code;
     protected List<String> messages = new ArrayList<>();
     Handler<AsyncResult<Response>> handler;
+
     
     public Response(Handler<AsyncResult<Response>> handler) {
         this.handler = handler;

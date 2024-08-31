@@ -18,4 +18,5 @@ public class Progress {
     public int count() {
         return count;
     };
+    
 }

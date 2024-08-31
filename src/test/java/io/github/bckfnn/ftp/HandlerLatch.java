@@ -15,18 +15,18 @@
  */
 package io.github.bckfnn.ftp;
 
+import java.awt.desktop.AboutHandler;
 import java.util.concurrent.CountDownLatch;
 
+import io.vertx.core.Handler;
 import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import io.vertx.core.AsyncResult;
-import io.vertx.core.AsyncResultHandler;
 
-public class HandlerLatch<T> implements AsyncResultHandler<T> {
+public class HandlerLatch<T> implements Handler<AsyncResult<T>>  {
     static Logger log = LoggerFactory.getLogger(HandlerLatch.class);
-
     private CountDownLatch latch = new CountDownLatch(1);
     private Throwable error;
     

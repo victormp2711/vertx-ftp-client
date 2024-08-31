@@ -32,6 +32,7 @@ public class ProgressPump implements Pump {
     private final Handler<Void> drainHandler;
     private int pumped;
     private Handler<Integer> progress;
+
     
     /**
      * Create a new {@code Pump} with the given {@code ReadStream} and {@code WriteStream}. Set the write queue max size
