@@ -28,7 +28,7 @@ import io.vertx.core.file.OpenOptions;
 public class FtpClientTele2Test {
     static Vertx vertx;
 
-   /* @BeforeClass
+    @BeforeClass
     public static void setup() {
         vertx = Vertx.vertx();
     }
@@ -138,5 +138,5 @@ public class FtpClientTele2Test {
             });
         });
         latch.await();
-    }*/
+    }
 }
